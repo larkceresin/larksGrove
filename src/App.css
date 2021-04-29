@@ -1,0 +1,144 @@
+.logo{
+    margin: 15px;
+    width: 50%;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+}
+.header__image{
+    width: 20%;
+}
+.header__list{
+    list-style: none;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.header__list-item{
+ margin: 5% 0;
+ font-size: 1.5em;
+ color: #406325;
+ text-decoration: none;
+}
+.list{
+    text-align: left;
+    list-style: none;
+}
+.selected{
+    color:#58410B;
+    text-decoration: underline;
+}
+.section__heading{
+    margin: 30px  20%;
+    color: #58410B;
+}
+.section__heading_welcome{
+    margin: 1% 30%;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+    color: #58410b;
+}
+.contact-form fieldset{
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+input{
+    width: 75%;
+    margin: 5px;
+}
+textarea{
+    width: 80%;
+    min-height: 100px;
+}
+
+.contact-form__submit {
+    font-size: 100%;
+    margin: auto;
+    width: 30%;
+  color: #406325;
+  background-color: #eeeed1;
+}
+.contact-form__submit:disabled {
+    background-color:ghostwhite;
+    color: gray;
+}
+.email-received{
+    position: absolute;
+    width: 50%;
+    top: 25%;
+    left: 25%;
+    right: 25%;
+    bottom: 25%;
+}
+.email-received_hidden{
+    display: none;
+}
+.section__main-image{
+    width: 60%;
+    margin: 0 20%;
+}
+.footer{
+    background-color: #377D13;
+    min-height: 15px;
+}
+.footer__list{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.two-columns{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+}
+.column{
+    width: 50%;
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+}
+.column p{
+    text-align: left;
+    
+}
+
+.blob{
+    background-color: #809552;
+    line-height: 15vh;
+    height: 15vh;
+    border-radius: 150px;
+    margin-top: 5px;
+}
+.blob__name{
+    font-size: 1.5rem;
+    color: #58410B;
+    text-decoration: none;
+}
+.blob__name:hover{
+    color: #377D13;
+}
+@media screen and (max-width: 700px) {
+    .two-columns{
+        flex-direction: column;
+    }
+    .column{
+        width: 90%;
+        padding: 0;
+    }
+    .contact-form{
+        width: 90%;
+    }
+    
+}
