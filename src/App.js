@@ -8,9 +8,38 @@ import About from './components/About';
 import Portfolio from './components/Portfolio';
 import NotFound from './components/NotFound';
 import Welcome from './components/Welcome'
+import logo from './images/logo.jpg';
 
 function App() {
   return (
+    <>
+      <header className="header">
+        <a href="/"><img src={logo} alt="Lark's Grove" className="logo header__image" /></a>
+        <h1 className="section__heading section__heading_welcome">Welcome to the grove!</h1>
+      </header>
+      <Switch>
+        <Route exact path="/">
+          <Welcome />
+          <About />
+          <Contact />
+          <Footer />
+        </Route>
+        <Route exact path="/portfolio">
+          <Portfolio />
+        </Route>
+        <Route path="/portfolio/web">
+    <p>Hello</p>
+        </Route>
+        <Route path="/portfolio/uiux">
+
+        </Route>
+        <Route path="/*">
+          <NotFound/>
+        </Route>
+      </Switch>
+    </>
+  )
+  /*return (
     <>
       <Header />
       <Switch>
@@ -41,7 +70,7 @@ function App() {
       </Switch>
       <Footer />
     </>
-  );
+  );*/
 }
 
 export default App;

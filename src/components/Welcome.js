@@ -1,27 +1,31 @@
 import React from "react";
-import mother from '../images/mother.png'
+import mother from '../images/jenna.png'
 export default function Welcome() {
-    return (<>
-        <h1 className="section__heading section__heading_welcome">Welcome to the grove!</h1>
-        <div className="two-columns">
+    return (
+        <>
+            <div className="two-columns">
+<div className="column"><img className="section__main-image" src={mother} alt="Woman holding a globe" /></div>
+                
             <div className="column">
-                <ul className="list">
-                    <li><b>Services:</b>
-                        <ul>
-                            <li>Web Development</li>
-                            <li>Web Design</li>
-                            <li>Content Creation</li>
-                </ul>
-                </li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
+                <h2>Hi! I'm Jenna!</h2>
+                <p>I'm a problem solver.</p>
+            <p>I'm passionate about creating, learning, and helping people. In my process of figuring out different ways to do those: I stumbled into development. My passion took me on a journey where I now have a variety of degrees and certifications in different fields:</p>
+            <ul className="list">
+                <li>A.S. in Culinology</li>
+                <li>B.A. in English with minor in Science, Technology, and Society</li>
+                <li>Massage Therapist and Health Educator</li>
+                <li>Graduate Studies in Business Administration</li>
+                <li>Graduate Studies in Healthcare Management</li>
+                <li>Web Developer</li>
+                <li>UI/UX Designer</li>
+            </ul>
+            <p> As a conglomeration of a variety of backgrounds: I'm on a mission to share my various passions, and find ways to put different ones together.</p>
 
-            <img className="section__main-image" src={mother} alt="Woman holding a globe" />
-        </div>
-    </>
+            </div>
+            </div>
+            
+
+
+        </>
     )
 }

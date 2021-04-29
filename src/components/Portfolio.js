@@ -10,8 +10,8 @@ return(
 
         <div className="column">
             <h2>Portfolio</h2>
-            <div className="blob"><Link className="blob__name" to="/webProjects">Web Development</Link></div>
-            <div className="blob"><Link className="blob__name" to="/uiux">UI / UX Designs</Link></div>
+            <div className="blob"><Link className="blob__name" to="/portfolio/web">Web Development</Link></div>
+            <div className="blob"><Link className="blob__name" to="/portfolio/uiux">UI / UX Designs</Link></div>
         </div>
     </div>
     

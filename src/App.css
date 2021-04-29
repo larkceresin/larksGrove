@@ -7,7 +7,7 @@
     flex-direction: row;
 }
 .header__image{
-    width: 20%;
+    width: 15%;
 }
 .header__list{
     list-style: none;
@@ -35,7 +35,8 @@
     color: #58410B;
 }
 .section__heading_welcome{
-    margin: 1% 30%;
+    width: 100%;
+    text-align: center;
 }
 .contact-form{
     display: flex;
@@ -72,7 +73,7 @@ textarea{
     color: gray;
 }
 .email-received{
-    position: absolute;
+    position: fixed;
     width: 50%;
     top: 25%;
     left: 25%;
