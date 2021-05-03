@@ -9,6 +9,7 @@ import Portfolio from './components/Portfolio';
 import NotFound from './components/NotFound';
 import Welcome from './components/Welcome'
 import logo from './images/logo.jpg';
+import Massage from './components/Massage';
 
 function App() {
   return (
@@ -31,7 +32,10 @@ function App() {
     <p>Hello</p>
         </Route>
         <Route path="/portfolio/uiux">
-
+<p>Designs Here!</p>
+        </Route>
+        <Route exact path="/massage">
+<Massage/>
         </Route>
         <Route path="/*">
           <NotFound/>

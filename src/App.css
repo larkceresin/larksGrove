@@ -130,6 +130,45 @@ textarea{
 .blob__name:hover{
     color: #377D13;
 }
+.massage{
+    min-height: 75vh;
+    width: 100%;
+    background-image: url('https://images.unsplash.com/photo-1483794344563-d27a8d18014e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.massage__services{
+    list-style: none;
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
+.massage__service-card{
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 5px;
+    border-radius: 45px;
+    background-color: #377D13;
+    width: 30%;
+    min-height: 15%;
+}
+.massage__service-title{
+    text-align: center;
+}
+.massage__service-image{
+    width: 75%;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+.massage__service-brief{
+    margin: 5px;
+    text-align: center;
+    max-height: 30%;
+    overflow-y:scroll;
+}
 @media screen and (max-width: 700px) {
     .two-columns{
         flex-direction: column;
