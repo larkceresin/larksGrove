@@ -121,15 +121,38 @@ textarea{
     height: 15vh;
     border-radius: 150px;
     margin-top: 5px;
+    display: flex;
+    align-content: center;
 }
 .blob__name{
     font-size: 1.5rem;
     color: #58410B;
-    text-decoration: none;
+    margin: auto;   
 }
-.blob__name:hover{
-    color: #377D13;
+.portfolio__image{
+    width: 90%;
+    border-radius: 10px;
+    margin: auto;
 }
+.portfolio__list-item{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 80%;
+    background-color: #377D13;
+    border-radius: 20px;
+    margin: 5px auto;
+}
+.portfolio__text{
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    padding: 3px;
+}
+.portfolio__text_description{
+    font-size: .7rem;
+}
+
 .massage{
     min-height: 75vh;
     width: 100%;
@@ -138,12 +161,18 @@ textarea{
     background-size: cover;
     background-repeat: no-repeat;
 }
-.massage__services{
+.scroll-area{
     list-style: none;
     display: flex;
     overflow-x: auto;
     flex-wrap: nowrap;
 }
+/*.massage__services{
+    list-style: none;
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}*/
 .massage__service-card{
     flex: 0 0 auto;
     display: flex;

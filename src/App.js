@@ -14,16 +14,12 @@ import Massage from './components/Massage';
 function App() {
   return (
     <>
-      <header className="header">
-        <a href="/"><img src={logo} alt="Lark's Grove" className="logo header__image" /></a>
-        <h1 className="section__heading section__heading_welcome">Welcome to the grove!</h1>
-      </header>
+    <Header/>
       <Switch>
         <Route exact path="/">
           <Welcome />
           <About />
           <Contact />
-          <Footer />
         </Route>
         <Route exact path="/portfolio">
           <Portfolio />
@@ -41,40 +37,10 @@ function App() {
           <NotFound/>
         </Route>
       </Switch>
+      <Footer/>
     </>
   )
-  /*return (
-    <>
-      <Header />
-      <Switch>
-        <Route exact path="/">
-          <Welcome/>
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/portfolio">
-          <Portfolio />
-        </Route>
-        <Route path="/blog">
-          <UnderConstruction />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-        <Route path="/webProjects">
-          <UnderConstruction />
-        </Route>
-        <Route path="/uiux">
-          <UnderConstruction />
-        </Route>
-        <Route path="/*">
-          <NotFound />
-        </Route>
-      </Switch>
-      <Footer />
-    </>
-  );*/
+
 }
 
 export default App;

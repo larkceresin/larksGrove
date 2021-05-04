@@ -4,10 +4,9 @@ export default function About() {
     return (
         <div className="two-columns">
             <div className="column">
-                <h3>Creations</h3>
+                <h3>What I'm Up To</h3>
                 <ul className="list">
-                    <li><a href="/portfolio/web" target="_blank">Web Applications</a></li>
-                    <li><a href="/portfolio/uiux" target="_blank">Designs</a></li>
+                    <li></li>
                 </ul>
             </div>
             <div className="column">

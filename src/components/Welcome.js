@@ -1,10 +1,11 @@
 import React from "react";
-import mother from '../images/jenna.png'
+import jenna from '../images/jenna.png'
+
 export default function Welcome() {
     return (
         <>
             <div className="two-columns">
-<div className="column"><img className="section__main-image" src={mother} alt="Woman holding a globe" /></div>
+<div className="column"><img className="section__main-image" src={jenna} alt="Woman holding a globe" /></div>
                 
             <div className="column">
                 <h2>Hi! I'm Jenna!</h2>

@@ -77,7 +77,7 @@ export default function Massage() {
         <div className="massage">
             
             <h2>Services</h2>
-            <ul className="massage__services">
+            <ul className="massage__services scroll-area">
                 {services.map((service) => {
                     return (<MassageCard
                         title={service.title}
