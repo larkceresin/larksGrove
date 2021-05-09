@@ -14,30 +14,28 @@ import Massage from './components/Massage';
 function App() {
   return (
     <>
-    <Header/>
+      <Header />
       <Switch>
         <Route exact path="/">
           <Welcome />
+        </Route>
+        <Route path="/about">
           <About />
+        </Route>
+        <Route path="/contact">
           <Contact />
         </Route>
         <Route exact path="/portfolio">
           <Portfolio />
         </Route>
-        <Route path="/portfolio/web">
-    <p>Hello</p>
-        </Route>
-        <Route path="/portfolio/uiux">
-<p>Designs Here!</p>
-        </Route>
         <Route exact path="/massage">
-<Massage/>
+          <Massage />
         </Route>
         <Route path="/*">
-          <NotFound/>
+          <NotFound />
         </Route>
       </Switch>
-      <Footer/>
+      <Footer />
     </>
   )
 

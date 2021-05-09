@@ -26,6 +26,11 @@
     text-align: left;
     list-style: none;
 }
+.list_header{
+    list-style: circle;
+    margin: 0;
+    padding: 0;
+}
 .selected{
     color:#58410B;
     text-decoration: underline;
@@ -37,6 +42,16 @@
 .section__heading_welcome{
     width: 100%;
     text-align: center;
+}
+.about__button{
+    margin: 0;
+}
+.about__header{
+    margin: 0;
+}
+.about__subheader{
+    font-size: .5rem;
+    margin-bottom: 5px;
 }
 .contact-form{
     display: flex;
@@ -84,8 +99,8 @@ textarea{
     display: none;
 }
 .section__main-image{
-    width: 60%;
-    margin: 0 20%;
+    width: 100%;
+    margin: auto;
 }
 .footer{
     background-color: #377D13;
@@ -96,6 +111,13 @@ textarea{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+.footer__icon{
+    max-width: 30px;
+    width: 5vw;
+    height: 5vw;
+    padding: 2px;
+
 }
 .two-columns{
     width: 80%;
@@ -108,7 +130,7 @@ textarea{
     width: 50%;
     margin: auto;
     padding: 15px;
-    text-align: center;
+    /*text-align: center;*/
 }
 .column p{
     text-align: left;
@@ -155,24 +177,25 @@ textarea{
 
 .massage{
     min-height: 75vh;
-    width: 100%;
+    width: 95%;
+    margin: auto;
     background-image: url('https://images.unsplash.com/photo-1483794344563-d27a8d18014e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
-.scroll-area{
-    list-style: none;
-    display: flex;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-}
-/*.massage__services{
+/*.scroll-area{
     list-style: none;
     display: flex;
     overflow-x: auto;
     flex-wrap: nowrap;
 }*/
+.massage__services{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
 .massage__service-card{
     flex: 0 0 auto;
     display: flex;
@@ -180,7 +203,8 @@ textarea{
     justify-content: space-around;
     margin: 5px;
     border-radius: 45px;
-    background-color: #377D13;
+    background-color: rgba(55, 125, 19, .5);
+    
     width: 30%;
     min-height: 15%;
 }
@@ -198,6 +222,23 @@ textarea{
     max-height: 30%;
     overflow-y:scroll;
 }
+.modal{
+display: none;
+}
+.modal_open{
+display: block;
+position:fixed;
+width: 90vw;
+top: 1%;
+left: 5%;
+right: 10%;
+bottom: 5px;
+background-color: rgb(55, 125, 19);
+}
+.two-columns img{
+    margin: 5% auto;
+}
+
 @media screen and (max-width: 700px) {
     .two-columns{
         flex-direction: column;

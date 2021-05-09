@@ -1,7 +1,11 @@
-import react from 'react';
-import { Link, Route, Switch } from 'react-router-dom';
+import react, { useState } from 'react';
 import MassageCard from './MassageCard';
+import UnderConstruction from './UnderConstruction'
 export default function Massage() {
+    let [title, setTitle] = useState('');
+    let [about, setAbout] = useState('');
+    let [image, setImage] = useState('');
+    let [isModalOpen, setIsModalOpen] = useState(false)
     let services = [
         {
             title: "Aromatherapy",
@@ -73,24 +77,47 @@ export default function Massage() {
             description: "Reiki is a Japanese form of energy work that cleanses and balances the energy system in the body. As a result, the body's natural self-healing mechanisms strengthen, helping to establish optimum health. During a session, I work directly with your energy field to remove blockages, detoxify your system, and restore your vital life force energy. Reiki utilizes a gentle laying on of hands to conduct the necessary energy force between us. The benefits of Reiki range from the release of habitual mental/emotional stress to alleviating chronic pain.",
             image: ""
         }]
+    function onCardClick(title, description, image) {
+        setTitle(title);
+        setAbout(description)
+        setImage(image);
+        setIsModalOpen(true)
+
+    };
+    function onModalClick() {
+        setIsModalOpen(false)
+    }
     return (
         <div className="massage">
-            
+            <UnderConstruction/>
+  <h2>About</h2>
+            <p>Jenna Toff is a California Certified Massage Therapist since 2018. Certificate #75513.</p>
+            <p>She studied massage therapy and health education at the National Holistic Institute, in San Jose, CA. Her studies covered Eastern and Western massage modalities.</p>
+            <p>In a session, Jenna incorporates techniques from different modalities for what best treats the issues within the tissues.</p>
+            <p>Always interested in learning more, Jenna is often taking additional classes and self-studying to learn additional techniques.</p>
+            <p>Jenna's skillset ranges from light & relaxing, to deep & theraputic, with a targeted approach to areas of discomfort.</p>
             <h2>Services</h2>
             <ul className="massage__services scroll-area">
                 {services.map((service) => {
                     return (<MassageCard
                         title={service.title}
                         description={service.description}
-                        image={service.image} />)
+                        image={service.image}
+                        onClick={()=>onCardClick(service.title, service.description, service.image)} />)
                 })}
             </ul>
-            <h2>About</h2>
-            <p>Jenna Toff is a California Certified Massage Therapist since 2018. Certificate #75513.</p>
-            <p>She studied massage therapy and health education at the National Holistic Institute, in San Jose, CA. Her studies covered Eastern and Western massage modalities.</p>
-            <p>In a session, Jenna incorporates techniques from different modalities for what best treats the issues within the tissues.</p>
-            <p>Always interested in learning more, Jenna is often taking additional classes and self-studying to learn additional techniques.</p>
-            <p>Jenna's skillset ranges from light & relaxing, to deep & theraputic, with a targeted approach to areas of discomfort.</p>
+          
+            <div className={isModalOpen ? "modal modal_massage modal_open" : "modal modal_massage"} onClick={onModalClick}>
+                <div className="modal__content">
+                    <div className="two-columns">
+                        <img className="section__main-image" src={image} alt={title} />
+                        <div className="column">
+                            <h3>{title}</h3>
+                            <p>{about}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
